@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "13481fde-f2e5-402c-b2b9-395aed78e081",
+		"name": "Catalog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "items",
+			"item": [
+				{
+					"name": "/items",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/items",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/items/:id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/items/8e0f9a8e-584d-4803-9572-22adcb9e2533",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"items",
+								"8e0f9a8e-584d-4803-9572-22adcb9e2533"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/items",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Golden sword\",\n    \"price\": 79\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/items",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/items/:id",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Renamed item\",\n    \"price\": 105\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/items/0b42794e-57a7-41ea-b0d1-cc217dd8ff1e",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"items",
+								"0b42794e-57a7-41ea-b0d1-cc217dd8ff1e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "/items/:id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseUrl}}/items/0b42794e-57a7-41ea-b0d1-cc217dd8ff1e",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"items",
+								"0b42794e-57a7-41ea-b0d1-cc217dd8ff1e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "https://localhost:5001"
+		}
+	]
+}
